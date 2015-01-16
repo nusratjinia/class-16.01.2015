@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title><link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>title</th>
+            <th>genere</th>
+            <th>stars</th>
+        </tr>
+        <thead
+    <tbody>
+    <?php
+
+//    $stars1=array('leading actress',
+//        'leading actor',
+//        'expendable',
+//        'somebody else');
+
+    $first=array('title'=>'funny movie 3',
+                     'genere'=>'comedy',
+                      'stars'=>array('a','b','c'));
+    $second=array('title'=>'kungfu',
+        'genere'=>'horor',
+        'stars'=>array('a','b','c','d'));
+
+    $films=array($first,$second);
+
+    ?>
+    <?php
+    foreach($films as $wish){?>
+        <tr>
+            <td><?php echo $wish['title']?></td>
+            <td><?php echo $wish['genere']?></td>
+            <td><ul>
+            <?php
+            foreach ($wish['stars'] as $characters){?>
+            <li><?php echo $characters;?></li>
+            <?php
+            }
+            ?>
+<!--            <td>--><?php //echo $wish['stars']?><!--</td>-->
+                </ul> </td>
+        </tr>
+    <?php }
+    ?>
+    </tbody>
+    </table>
+</div>
+</body>
+</html
